@@ -4,7 +4,7 @@
 //record the results and repeat until 5 games elapse//
 //after 5 games announce total wins/losses/ties//
 
-function computerPlay() {
+function computerPlay() { //computer chooses random interger 0,1,2 then assign rock, papaer, or scissors; returns selection of the three//
     let num; 
     num = Math.random();
     num= num*3;
@@ -20,7 +20,7 @@ function computerPlay() {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {  //asks user to pick r/p/s, calls computerPlay to choose at random, then evaluates which won the round//
     playerSelection=playerSelection.toLowerCase()
     if (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
         return `You entered "${playerSelection}"; please enter "rock", "paper", or "scissors" instead`;
@@ -36,7 +36,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+function game() {  //has the user play 5 rounds of r/p/s against the computer, records results, and  after 5 rounds displays which won overall//
     let round=0;
     let userChoice, result, win=0, loss=0, tie=0;
     while (round<5) {
