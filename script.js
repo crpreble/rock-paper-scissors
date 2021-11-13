@@ -5,11 +5,14 @@
 //after 5 games announce total wins/losses/ties//
 
 function computerPlay() {
-    let num=Math.floor(Math.random()*3)
-    if(num=0) {
+    let num; 
+    num = Math.random();
+    num= num*3;
+    num=Math.floor(num);
+    if (num==0) {
         return "rock";
     }
-    else if (num=1) {
+    else if (num==1) {
         return "scissors";
     }
     else {
@@ -55,12 +58,12 @@ function game() {
         console.log(`Your record is ${win} wins, ${loss} losses, and ${tie} ties.`)
     }
     if (win>loss) {
-        console.log(`after 5 rounds, you won ${win}. lost ${loss}, and tied ${tie}; You're the winner!`)
+        console.log(`after 5 rounds, you won ${win}. lost ${loss}, and tied ${tie}; You're the winner!`);
     }
-    else if (win>loss) {
-        console.log(`after 5 rounds, you won ${win}. lost ${loss}, and tied ${tie}; the computer has triumphed!`)
+    else if (win<loss) {
+        console.log(`after 5 rounds, you won ${win}. lost ${loss}, and tied ${tie}; the computer has triumphed!`);
     }
     else {
-        console.log(`after 5 rounds, you won ${win}. lost ${loss}, and tied ${tie}; you are an even match!`)
+        console.log(`after 5 rounds, you won ${win}, lost ${loss}, and tied ${tie}; you are an even match!`);
     }
 }
